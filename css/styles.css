@@ -1,0 +1,377 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Desktop */
+@media screen and (min-width:1280px) {
+body {
+    max-width: 1920px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-family: helvetica;
+    font-size: x-large;
+}
+
+#header {
+    background-color: hsl(0, 0%, 10%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+#banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    /* Increased height for a larger fade area */
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), transparent);
+    pointer-events: none;
+}
+
+#banner img {
+    height: 400px;
+    filter: drop-shadow(10px 10px 4px #0000008a);
+}
+
+.textoarea {
+    padding: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.par {
+    width: 40%;
+    max-width: 700px;
+}
+
+.spar {
+    min-width: 70%;
+    max-width: 800px;
+}
+
+button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 24px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, rgb(230, 217, 30) 0%, rgb(224, 227, 28) 50%, rgb(194, 215, 4) 100%);
+    color: #444444;
+}
+
+#imagens {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#imagens img {
+    width: 100%;
+    height: 200px; /* or any height you prefer */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+
+/* Estilos para o overlay */
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 5%, 0.6); /* cinza semi-transparente */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* para não bloquear o mouse */
+}
+}
+
+/* Início tablet */
+@media screen and (max-width: 1279px) and (min-width: 481px){
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: helvetica;
+}
+
+#header {
+    background-color: hsl(0, 0%, 10%);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+#cssmenu img {
+    float: left;
+    height: 50px;
+    z-index: 100;
+}
+
+#banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    /* Increased height for a larger fade area */
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), transparent);
+    pointer-events: none;
+}
+
+#banner img {
+    height: 400px;
+    filter: drop-shadow(10px 10px 4px #0000008a);
+}
+
+.textoarea {
+    padding: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.par {
+    width: 40%;
+}
+
+button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 24px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, rgb(230, 217, 30) 0%, rgb(224, 227, 28) 50%, rgb(194, 215, 4) 100%);
+    color: #444444;
+}
+
+#imagens {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#imagens img {
+    max-width: 300px;
+    width: 100%;
+    height: 200px; /* or any height you prefer */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Estilos para o overlay */
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 5%, 0.6); /* cinza semi-transparente */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* para não bloquear o mouse */
+}
+}
+
+/* Início celular */
+@media screen and (max-width: 480px) {
+body {
+    max-width: 1920px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-family: helvetica;
+    font-size: regular;
+}
+
+#header {
+    background-color: hsl(0, 0%, 10%);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+#banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    /* Increased height for a larger fade area */
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), transparent);
+    pointer-events: none;
+}
+
+#banner img {
+    height: 400px;
+    filter: drop-shadow(10px 10px 4px #0000008a);
+}
+
+.textoarea {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 24px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, rgb(230, 217, 30) 0%, rgb(224, 227, 28) 50%, rgb(194, 215, 4) 100%);
+    color: #444444;
+}
+
+#imagens {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#imagens img {
+    width: 100%;
+    height: 200px; /* or any height you prefer */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+
+/* Estilos para o overlay */
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 5%, 0.6); /* cinza semi-transparente */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* para não bloquear o mouse */
+}
+}
