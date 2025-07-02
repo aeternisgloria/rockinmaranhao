@@ -134,7 +134,7 @@ button {
 }
 
 /* Início tablet */
-@media screen and (max-width: 1279px) and (min-width: 481px){
+@media screen and (max-width: 1279px) and (min-width: 720px){
 body {
     margin: 0;
     background-color: black;
@@ -259,7 +259,7 @@ button {
 }
 
 /* Início celular */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 body {
     max-width: 1920px;
     margin: auto;
@@ -354,8 +354,6 @@ button {
     object-fit: cover;
     cursor: pointer;
 }
-
-
 
 /* Estilos para o overlay */
 .img-overlay {
